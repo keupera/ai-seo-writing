@@ -121,6 +121,14 @@ Everything else, including Cursor, VS Code, ChatGPT, Codex, Gemini CLI, Windsurf
 
 The skill works without it. When the MCP is absent it says which numbers it will not estimate and marks the gaps instead of filling them with plausible fiction.
 
+## The rest of the toolkit
+
+[`keupera/seo-skills`](https://github.com/keupera/seo-skills) is a companion pack of 30 skills for the work around the writing: technical audits, schema, keyword strategy, AI answer-engine visibility, migrations, Core Web Vitals, and platform-specific fixes for Next.js, Shopify and WordPress.
+
+```bash
+npx skills add keupera/seo-skills
+```
+
 ## Contributing
 
 Issues and pull requests are welcome, particularly additions to The Don'ts. If a phrase or tic reliably marks a draft as machine-written, that belongs in the list. Include an example.
