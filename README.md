@@ -2,9 +2,13 @@
 
 An agent skill for writing blog posts and web articles that rank in Google **and** get cited in AI Overviews, AI Mode, ChatGPT, Perplexity and Claude, without sounding like a content mill wrote them.
 
-Works with Claude Code, Claude.ai and Claude Desktop, and with any agent that can read a Markdown instruction file.
+```bash
+npx skills add keupera/ai-seo-writing
+```
 
-Maintained by [Keupera](https://keupera.com).
+Works with Claude Code, Claude.ai and Claude Desktop, plus 70+ other agents including Cursor, Codex, Copilot, Gemini CLI, Windsurf, OpenCode and Zed.
+
+Listed on [skills.sh](https://www.skills.sh/keupera/ai-seo-writing/ai-seo-writing). Maintained by [Keupera](https://keupera.com).
 
 ---
 
@@ -25,24 +29,33 @@ The trigger is deliberately broad. Any request to produce content destined for a
 
 ## Install
 
-### Claude Code
-
-Personal skill, available in every project:
+The [skills CLI](https://github.com/vercel-labs/skills) detects which agents you have and installs to each of them:
 
 ```bash
-git clone https://github.com/keupera/ai-seo-writing.git ~/.claude/skills/ai-seo-writing
-```
-
-Project skill, checked in with the repo:
-
-```bash
-git clone https://github.com/keupera/ai-seo-writing.git .claude/skills/ai-seo-writing
-```
-
-Or with the skills CLI:
-
-```bash
+# Install for this project
 npx skills add keupera/ai-seo-writing
+
+# Install once, available everywhere
+npx skills add keupera/ai-seo-writing -g
+
+# Pick the agents yourself
+npx skills add keupera/ai-seo-writing -g -a claude-code -a cursor -a codex
+```
+
+Try it without installing anything:
+
+```bash
+npx skills use keupera/ai-seo-writing | claude
+```
+
+### Claude Code, by hand
+
+```bash
+# Personal, available in every project
+git clone https://github.com/keupera/ai-seo-writing.git ~/.claude/skills/ai-seo-writing
+
+# Project, committed with the repo
+git clone https://github.com/keupera/ai-seo-writing.git .claude/skills/ai-seo-writing
 ```
 
 Restart Claude Code, or run `/skills` to confirm it loaded.
@@ -51,9 +64,9 @@ Restart Claude Code, or run `/skills` to confirm it loaded.
 
 Download the repo as a ZIP, then add it under Settings → Capabilities → Skills.
 
-### Other agents
+### Anything else
 
-`SKILL.md` is plain Markdown with YAML frontmatter. Point Cursor, Windsurf, Codex, Gemini CLI or a custom agent at the file, or paste its body into a system prompt.
+`SKILL.md` is plain Markdown with YAML frontmatter. Point any agent at the file, or paste its body into a system prompt.
 
 ## What's inside
 
